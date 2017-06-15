@@ -12,6 +12,7 @@ const expressValidator = require('express-validator');
 const routes = require('./routes/index');
 const adminRoutes = require('./routes/adminRoutes/index.js'); //delete later
 const arlinRutas = require('./routes/arlinRoutes/arlin.js'); //delete later
+const arlinTemplateRoutes = require('./routes/arlinRoutes/template.js'); //delete later
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
@@ -71,6 +72,7 @@ app.use((req, res, next) => {
 app.use('/', routes);
 app.use('/admin', adminRoutes); //delete later
 app.use('/arlin', arlinRutas); //delete later
+app.use('/template', arlinTemplateRoutes); //delete later
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use(errorHandlers.notFound);
