@@ -10,8 +10,8 @@ const promisify = require('es6-promisify');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
 const routes = require('./routes/index');
-const adminRoutes = require('./routes/adminRoutes/index.js');
-const arlinRutas = require('./routes/arlinRoutes/arlin.js');
+const adminRoutes = require('./routes/adminRoutes/index.js'); //delete later
+const arlinRutas = require('./routes/arlinRoutes/arlin.js'); //delete later
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
@@ -69,8 +69,8 @@ app.use((req, res, next) => {
 
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);
-app.use('/admin', adminRoutes);
-app.use('/arlin', arlinRutas);
+app.use('/admin', adminRoutes); //delete later
+app.use('/arlin', arlinRutas); //delete later
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use(errorHandlers.notFound);
