@@ -42,4 +42,11 @@ rutas.get('/sayHi/:name', (req, res) => {
   res.send('HOLA ' + req.params.name);
 });
 
+//reverse variable name of the url
+rutas.get('/reverse/:text', (req, res) => {
+  var reversedText = req.params.text.split('').reverse().join('');
+  res.send(reversedText);
+});
+
+
 module.exports = rutas;
