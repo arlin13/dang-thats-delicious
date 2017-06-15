@@ -11,6 +11,7 @@ const flash = require('connect-flash');
 const expressValidator = require('express-validator');
 const routes = require('./routes/index');
 const adminRoutes = require('./routes/adminRoutes/index.js');
+const arlinRutas = require('./routes/arlinRoutes/arlin.js');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 
@@ -69,6 +70,7 @@ app.use((req, res, next) => {
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);
 app.use('/admin', adminRoutes);
+app.use('/arlin', arlinRutas);
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use(errorHandlers.notFound);
