@@ -8,7 +8,8 @@ const router = express.Router();
 // pass variables of the query url to view template
 router.get('/', (req, res) => {
   res.render('hello', {
-    dog: req.query.dog
+    dog: req.query.dog,
+    title: 'template'
   });
 });
 

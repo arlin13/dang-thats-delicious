@@ -3,7 +3,7 @@ extends layout
 block content
   p Hola mundo
 
-  div#container(style='border:1px black solid; background-color:lightblue; padding:5px;')
+  div#container(style='border:1px black solid; background-color:lightblue; padding:0 5px;')
     p(style='font-size:2.5em') estoy dentro de un div
 
   h1 Variable from url
@@ -23,4 +23,4 @@ block content
   hr
     
 block footer
-  span Esta pagina es la de hello pug
+  span Esta pagina es la de hello pug y fue programada por #{h.developerName}
