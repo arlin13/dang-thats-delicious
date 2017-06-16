@@ -1,17 +1,26 @@
-p Hola mundo
-h1 yo soy un header 1
-h3 yo soy un header 3
-h5 yo soy un header 5
+extends layout
 
-div#container(style='border:1px black solid; background-color:red;')
-  p(style='font-size:2.5em') estoy dentro de un div
-  p yo tmb
+block content
+  p Hola mundo
 
+  div#container(style='border:1px black solid; background-color:lightblue; padding:5px;')
+    p(style='font-size:2.5em') estoy dentro de un div
 
-hr
-hr
-hr
+  h1 Variable from url
+  p el nombre de mi perro es:
+    em #{dog}
 
-h1 Variable from url
-h3 el nombre de mi perro es: 
-  em #{dog}
+  hr
+
+  .wrapper
+    - const myName = 'Arlin Grijalba';
+    - const myNameUpCase = myName.toUpperCase();
+
+    p #{myName}
+    p #{myNameUpCase}
+    p #{myName.toUpperCase()}
+
+  hr
+    
+block footer
+  span Esta pagina es la de hello pug
