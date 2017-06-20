@@ -10,11 +10,16 @@ exports.homePage = (req, res) => {
   });
 };
 
+exports.addStore = (req, res) => {
+  res.render('editStore', {title: 'Edit store'});
+}
+
 //delete later
 exports.testMiddleware = (req, res, next) =>{
   next();
 };
 
+//delete later
 exports.test = function(req, res) {
   res.render('index', {
     title: 'myMiddleware test',
