@@ -50,6 +50,8 @@ rutas.get('/reverse/:text', (req, res) => {
 
 //render view inside of Arlin
 rutas.get('/template', (req, res) => {
-  res.render('render');
+  res.render('render', {
+    title: 'Arlin is cool'
+  });
 });
 module.exports = rutas;
