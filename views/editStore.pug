@@ -1,5 +1,8 @@
 extends layout
 
+include mixins/_storeForm
+
 block content
   .inner
     h2 This is the #{title} page
+    +storeForm({name: 'Old Navy'})
