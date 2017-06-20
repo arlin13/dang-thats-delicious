@@ -14,6 +14,10 @@ exports.addStore = (req, res) => {
   res.render('editStore', {title: 'Edit store'});
 }
 
+exports.createStore = (req, res) => {
+  res.json(req.body);
+};
+
 //delete later
 exports.testMiddleware = (req, res, next) =>{
   next();
