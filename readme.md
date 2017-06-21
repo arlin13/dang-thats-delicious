@@ -1,6 +1,9 @@
+## Learn NODE - with Wes Bos
+--
+
 ## What is this?
 
-Just you wait folks!
+Project created following Wes Bos Videos to learn NodeJS
 
 ## Sample Data
 
