@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const Store = mongoose.model('Store');
+
 // exports.myMiddleware = (req, res, next) => {
 //   req.name= 'Arlin';
 //   next();
@@ -14,8 +17,11 @@ exports.addStore = (req, res) => {
   res.render('editStore', {title: 'Edit store'});
 }
 
-exports.createStore = (req, res) => {
-  res.json(req.body);
+exports.createStore = async (req, res) => {
+  const store = new Store(req.body);
+  //store.age = 18; // you can add more things
+  await store.save();
+  res.redirect('/');
 };
 
 //delete later
